@@ -35,7 +35,7 @@ Check out the Notebooks:
 </div>
 
 I am open to any suggestions, connect with me anywhere! <br/>
-Also, I would appreciate it if I can get a ⭐ for this repository from your side. ☺
+Also, I would appreciate it if I can get a 🌟 for this repository from your side. ☺
 
 ## 💻 Tech Stack:
 <img src="https://i.ibb.co/vByQbTM/OIP.jpg" alt="Yolov5" width="auto" height="100"> </br>
