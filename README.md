@@ -21,6 +21,32 @@ By combining mosaic data augmentation, strategies to address the small object pr
 
 The Data Augmentation Techniques can be performed manually, but as we are using YOLOv5, it will be handled by yolov5 itself.
 
+## Model Training
+| Index | Weights | Epoch | Batch_size | Precision | Recall | mAP50 | mAP50:95 | Training Comment
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 1 | new | 30 | 16 | 0.928 | 0.839 | 0.904 | 0.492 | Simple Training |
+| 2 | 1 | +40 | 16 | 0.91 | 0.86 | 0.92 | 0.49 | Added Mixup Augmentation |
+|   | 2 | +30 | 16 | 0.946 | 0.846 | 0.918 | 0.508 | Default Hyp.yaml and Custom Augmented Data (Patches) |
+|   | 2_1 | +100 | 16 | 0.888 | 0.771 | 0.848 | 0.436 | - Custom hyp.starfish.yaml : Inc. 'box': '0.7', Dec. 'cls': '0.1', Dec. 'iou_t': '0.1' <br> - Added Mixup <br> - train data + custom augmneted data |
+|   | 2_1 | +100 | 16 | 0.91 | 0.908 | 0.939 | 0.556 | Default Hyp.yaml and train data + custom augmneted data |
+| 3 | 2 | +10 | 16 | 0.905 | 0.805 | 0.895 | 0.475 | Custom hyp.starfish.yaml : Inc. 'box': '0.5', Dec. 'cls': '0.2' |
+| 4 | 3 | +30 | 16 | 0.882 | 0.807 | 0.884 | 0.485 | Custom Data Augmentation (Patches) |
+| 5 | new | 30 | 16 | 0.737 | 0.734 | 0.75 | 0.378 | Preprocessed Tiles Data (2x2) (simple Training) |
+| 6 | 5 | +40 | 16 | 0.785 | 0.723 | 0.776 | 0.416 | - Custom hyp.starfish.yaml : Inc. 'box': '0.7', Dec. 'cls': '0.1', Dec. 'iou_t': '0.1' <br> - Added Mixup Augmentation |
+| 7 | new | 30 | 16 | 0.846 | 0.67 | 0.758 | 0.345 | Preprocessed Tiles Data (3x2) w/ bbox_tile_threshold=0.5 (simple Training) |
+| 8 | 7 | +40 | 16 | 0.774 | 0.694 | 0.758 | 0.395 | - Custom hyp.starfish.yaml : Inc. 'box': '0.7', Dec. 'cls': '0.1', Dec. 'iou_t': '0.1' <br> - Added Mixup Augmentation |
+| 9 | 8 | +40 | 16 | 0.821 | 0.725 | 0.793 | 0.433 | - Custom hyp.starfish.yaml : Inc. 'box': '0.7', Dec. 'cls': '0.1', Dec. 'iou_t': '0.1' <br> - Added Mixup Augmentation |
+
+#### The best result is given by the training index 2_3 with performance:
+| Metric | Performance |
+| :--: | :--: |
+| Precision | 0.91 |
+| Recall | 0.908 |
+| mAP50 | 0.939 |
+| mAP50:95 | 0.556 |
+
+![Performance](https://github.com/lunaSnowflake/StarFish-Object-Detection/assets/110465395/4942e102-1b73-4170-b838-2a3572dcafe9)
+
 ## 🌟 Acknowledgements:
 The Data can be found here [Tensorflow Great Barrier Reef](https://www.kaggle.com/competitions/tensorflow-great-barrier-reef) <br/>
 
