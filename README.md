@@ -3,17 +3,33 @@
 <!-- <p align="center"><img src="https://i.ibb.co/jzhW8V6/starfish-sample2.png" alt="Seabed with starfish"></p> -->
 <p align="center"><img src="https://i.ibb.co/QfM9nMs/Clouds-Convert-maxresdefault-1685913043.jpg" alt="hq720" width=1280></p>
 
-## In this computer vision problem, we will be focused on starfish detection in seabed imagery.
+## Introduction
 
-### Some of the biggest challenges we have to face, are the following:
+The goal of this project is to accurately identify starfish in real-time by building an object detection model trained on underwater videos of coral reefs.
 
-- **We encounter notable challenges known as the "small object problem." This refers to the difficulty of accurately detecting small objects compared to larger ones.**
+Australia's stunningly beautiful Great Barrier Reef is the world’s largest coral reef and home to 1,500 species of fish, 400 species of corals, 130 species of sharks, rays, and a massive variety of other sea life.
+
+Unfortunately, the reef is under threat, in part because of the overpopulation of one particular starfish – the coral-eating crown-of-thorns starfish (or COTS for short). Scientists, tourism operators, and reef managers established a large-scale intervention program to control COTS outbreaks to ecologically sustainable levels.
+
+## Project Overview
+
+In this object detection project, we will be training a computer vision model [YOLOv5](https://github.com/ultralytics/yolov5). While there are a galaxy of models out there, I've chosen v5 to strut its stuff on my system's dance floor – it's like the ideal dance partner for my resources! 
+
+We will try to implement different computer vision techniques such as data augmentation, splitting the frame into multiple tiles, and a bunch of different preprocessing techniques. We will also perform Hyperparameter tuning to get much out of the model and get the best model for our problem statement.
+
+## Challenges
+
+- **Small Object Problem**
+
+This refers to the difficulty of accurately detecting small objects compared to larger ones.
 
 Fortunately, there are effective techniques available to mitigate this problem, one of which is the "Mosaic data augmentation" approach. This technique involves combining four images and dividing them into four randomly-sized tiles, allowing the model to learn from a more diverse range of object sizes and spatial arrangements. 
 
 In addition to mosaic data augmentation, there are several other methods and techniques that can be employed to address the small object problem. Some examples include adjusting anchor box sizes, implementing focal loss to focus on harder examples, using progressive resizing to train the model on larger image sizes, and incorporating object detection algorithms specifically designed for small objects, such as EfficientDet or YOLO Nano.
 
-- **Another challenge we face is the imbalance in the dataset due to a significant number of frames without starfish. To tackle this issue, we can selectively include only a subset of these empty frames for training, effectively reducing the class imbalance. However, this approach may result in a relatively small amount of training data.**
+- **Imbalance Dataset**
+
+Another challenge we face is the imbalance in the dataset due to a significant number of frames without starfish. To tackle this issue, we can selectively include only a subset of these empty frames for training, effectively reducing the class imbalance. However, this approach may result in a relatively small amount of training data.
 
 To overcome the limited data concern, data augmentation techniques can be leveraged. These techniques involve applying various transformations such as rotation, scaling, translation, and flipping to artificially expand the training dataset. This augmentation increases the diversity of the available data and helps the model generalize better to unseen images.
 
