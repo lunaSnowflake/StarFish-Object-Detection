@@ -72,13 +72,13 @@ Check out the Notebooks:
   <a href="https://colab.research.google.com/github/lunaSnowflake/StarFish-Object-Detection/blob/main.ipynb">
     <img src="https://github.com/ultralytics/yolov5/releases/download/v1.0/logo-colab-small.png" width="10%" /></a>
     <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="5%" alt="" />
-  <a href="https://www.kaggle.com/code/lunaticsain/star-fish-object-detection">
+  <a href="https://www.kaggle.com/code/lunaticsain/starfish-object-detection-yolov5">
     <img src="https://github.com/ultralytics/yolov5/releases/download/v1.0/logo-kaggle-small.png" width="10%" /></a>
     <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="5%" alt="" />
 </div>
 
 I am open to any suggestions, connect with me anywhere! <br/>
-Also, I would appreciate it if I can get a 🌟 for this repository from your side. ☺
+Also, I would appreciate it if I could get a 🌟 for this repository from your side. ☺
 
 ## 💻 Tech Stack:
 <img src="https://i.ibb.co/vByQbTM/OIP.jpg" alt="Yolov5" width="auto" height="100"> </br>
